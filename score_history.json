@@ -1,0 +1,66 @@
+{
+  "entries": [
+    {
+      "analysis_cutoff": "2026-08-09T22:00:00Z",
+      "config_hash": "6097b3793b55fbee0d908adfcb92345d33dae9a5134af47a5a0ee74eef0b299f",
+      "entry_hash": "60f977d91faac33d942a14e5d410150ab3c76ea578fc853d02ad8cf78fca9fbf",
+      "market_session": "2026-08-07",
+      "observations": [
+        {
+          "confidence": 76.0,
+          "direction": "mild_bullish",
+          "symbol": "AAOI",
+          "technical_score": 17.880365
+        },
+        {
+          "confidence": 81.0,
+          "direction": "mild_bullish",
+          "symbol": "LITE",
+          "technical_score": 23.866362
+        },
+        {
+          "confidence": 73.5,
+          "direction": "neutral",
+          "symbol": "MRVL",
+          "technical_score": 1.830683
+        }
+      ],
+      "retrieval_id": "20260809T213500678773Z",
+      "run_id": "20260809T220000Z-ee00ea75"
+    },
+    {
+      "analysis_cutoff": "2026-08-10T23:18:19.776611Z",
+      "config_hash": "5c529f722acff948594d198ef4d7792b537a3169c3471cad7fb28c9ad3fc5c84",
+      "entry_hash": "799ad6bb241a4a76a06537d71f6b9c9ffb4960e21240da3918f0785c89ee8a7e",
+      "market_session": "2026-08-10",
+      "observations": [
+        {
+          "confidence": 77.666667,
+          "direction": "mild_bullish",
+          "symbol": "AAOI",
+          "technical_score": 19.913341
+        },
+        {
+          "confidence": 79.75,
+          "direction": "mild_bullish",
+          "symbol": "LITE",
+          "technical_score": 21.737507
+        },
+        {
+          "confidence": 76.0,
+          "direction": "neutral",
+          "symbol": "MRVL",
+          "technical_score": 11.715312
+        }
+      ],
+      "retrieval_id": "20260810T231819776610Z",
+      "run_id": "20260810T231819Z-3240f596"
+    }
+  ],
+  "focus_symbols": [
+    "AAOI",
+    "LITE",
+    "MRVL"
+  ],
+  "schema_version": 1
+}

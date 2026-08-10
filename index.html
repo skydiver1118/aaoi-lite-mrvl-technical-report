@@ -30,7 +30,7 @@ h2 { margin-top: 0; padding-top: 6px; font-size: 1.55rem; }
 h3 { margin: 28px 0 10px; font-size: 1.08rem; }
 p { max-width: 80ch; }
 .meta, .muted { color: var(--muted); }
-.overview, .stock, .sources { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 18px 0; box-shadow: 0 5px 18px #0000000b; }
+.overview, .score-trends, .stock, .sources { background: var(--panel); border: 1px solid var(--line); border-radius: 14px; padding: 24px; margin: 18px 0; box-shadow: 0 5px 18px #0000000b; }
 .kpi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 12px; margin: 16px 0; }
 .kpi { border: 1px solid var(--line); border-radius: 10px; padding: 14px; min-height: 88px; }
 .kpi span { display: block; color: var(--muted); font-size: .82rem; margin-bottom: 5px; }
@@ -42,18 +42,20 @@ thead th { color: var(--muted); font-size: .8rem; text-transform: uppercase; let
 .num { text-align: right; font-variant-numeric: tabular-nums; }
 .definition-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; margin: 12px 0; }
 .definition-grid div { border: 1px solid var(--line); border-radius: 9px; padding: 11px 13px; }
+.trend-observations { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px; }
+.trend-observations ol { margin-top: 0; font-variant-numeric: tabular-nums; }
 dt { color: var(--muted); font-size: .8rem; }
 dd { margin: 3px 0 0; font-weight: 650; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
 .note { background: var(--note); border-left: 4px solid var(--accent); padding: 10px 13px; border-radius: 5px; color: var(--ink); }
 footer { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); color: var(--muted); font-size: .88rem; }
-@media (max-width: 640px) { main { padding: 24px 12px 50px; } .overview, .stock, .sources { padding: 17px; } }
+@media (max-width: 640px) { main { padding: 24px 12px 50px; } .overview, .score-trends, .stock, .sources { padding: 17px; } }
 </style>
 </head>
 <body>
 <main>
 <header>
   <h1>Semiconductor Pre-Market Technical Analysis</h1>
-  <div class="meta"><strong>As of:</strong> 2026-08-09T22:00:00+00:00 · <strong>Run ID:</strong> <code>20260809T220000Z-ee00ea75</code></div>
+  <div class="meta"><strong>As of:</strong> 2026-08-10T23:18:19.776611+00:00 · <strong>Run ID:</strong> <code>20260810T231819Z-3240f596</code></div>
 </header>
 <section class="overview">
   <h2>Market state and signal summary</h2>
@@ -67,18 +69,142 @@ footer { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line);
   <div class="table-wrap">
     <table>
       <thead><tr><th>Symbol</th><th class="num">Score</th><th class="num">Confidence</th><th>Direction</th><th>Stock regime</th><th class="num">Forum mentions</th></tr></thead>
-      <tbody><tr><th scope="row">AAOI</th><td class="num">17.9</td><td class="num">76.0%</td><td>mild bullish</td><td>expansion</td><td class="num">0</td></tr><tr><th scope="row">LITE</th><td class="num">23.9</td><td class="num">81.0%</td><td>mild bullish</td><td>weak trend</td><td class="num">0</td></tr><tr><th scope="row">MRVL</th><td class="num">1.8</td><td class="num">73.5%</td><td>neutral</td><td>range</td><td class="num">0</td></tr></tbody>
+      <tbody><tr><th scope="row">AAOI</th><td class="num">19.9</td><td class="num">77.7%</td><td>mild bullish</td><td>expansion</td><td class="num">0</td></tr><tr><th scope="row">LITE</th><td class="num">21.7</td><td class="num">79.8%</td><td>mild bullish</td><td>range</td><td class="num">0</td></tr><tr><th scope="row">MRVL</th><td class="num">11.7</td><td class="num">76.0%</td><td>neutral</td><td>range</td><td class="num">0</td></tr></tbody>
     </table>
   </div>
 </section>
 
+<section class="score-trends" id="score-strength-trend">
+  <h2>Score strength trend</h2>
+  <p class="note">This research-only section describes composite-score change. It is not a forecast, recommendation, calibrated probability, or trading instruction.</p>
+  <div class="table-wrap">
+    <table>
+      <caption>Deterministic composite-score change by focus symbol</caption>
+      <thead><tr><th>Symbol</th><th class="num">Previous score</th><th class="num">Current score</th><th class="num">1-session delta</th><th class="num">5-report delta</th><th>State</th></tr></thead>
+      <tbody><tr><th scope="row">AAOI</th><td class="num">17.9</td><td class="num">19.9</td><td class="num">+2.0</td><td class="num">Unavailable</td><td>strengthening</td></tr><tr><th scope="row">LITE</th><td class="num">23.9</td><td class="num">21.7</td><td class="num">-2.1</td><td class="num">Unavailable</td><td>weakening</td></tr><tr><th scope="row">MRVL</th><td class="num">1.8</td><td class="num">11.7</td><td class="num">+9.9</td><td class="num">Unavailable</td><td>strengthening</td></tr></tbody>
+    </table>
+  </div>
+  <div class="trend-observations"><article><h3>AAOI score observations</h3><ol><li><time datetime="2026-08-07">2026-08-07</time> <data value="17.880365">17.9</data></li><li><time datetime="2026-08-10">2026-08-10</time> <data value="19.913341">19.9</data></li></ol></article><article><h3>LITE score observations</h3><ol><li><time datetime="2026-08-07">2026-08-07</time> <data value="23.866362">23.9</data></li><li><time datetime="2026-08-10">2026-08-10</time> <data value="21.737507">21.7</data></li></ol></article><article><h3>MRVL score observations</h3><ol><li><time datetime="2026-08-07">2026-08-07</time> <data value="1.830683">1.8</data></li><li><time datetime="2026-08-10">2026-08-10</time> <data value="11.715312">11.7</data></li></ol></article></div>
+</section>
+
+
 <section class="stock" id="aaoi">
   <h2>AAOI</h2>
   <div class="kpi-grid">
-    <article class="kpi"><span>Technical score</span><strong>17.9</strong></article>
-    <article class="kpi"><span>Confidence</span><strong>76.0%</strong></article>
+    <article class="kpi"><span>Technical score</span><strong>19.9</strong></article>
+    <article class="kpi"><span>Confidence</span><strong>77.7%</strong></article>
     <article class="kpi"><span>Direction</span><strong>mild bullish</strong></article>
     <article class="kpi"><span>Stock regime</span><strong>expansion</strong></article>
+  </div>
+
+  <h3>Confidence diagnostics</h3>
+  <p class="note">Method: deterministic_component_reliability_v1. Confidence is not a return probability.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Component</th><th class="num">Value</th><th>Status</th></tr></thead>
+      <tbody><tr><th scope="row">Agreement</th><td class="num">0.667</td><td>available</td></tr><tr><th scope="row">Calibration Quality</th><td class="num">Unavailable</td><td>not_applicable_ai_disabled</td></tr><tr><th scope="row">Data Quality</th><td class="num">0.600</td><td>available</td></tr><tr><th scope="row">Deterministic Reliability</th><td class="num">0.500</td><td>unavailable_neutral_policy</td></tr><tr><th scope="row">Event Risk Quality</th><td class="num">1.000</td><td>available</td></tr><tr><th scope="row">Liquidity Quality</th><td class="num">1.000</td><td>available</td></tr><tr><th scope="row">Regime Stability</th><td class="num">0.700</td><td>available</td></tr><tr><th scope="row">Sample Support</th><td class="num">1.000</td><td>available</td></tr></tbody>
+    </table>
+  </div>
+  <p><strong>Preferred setup:</strong> No approved setup</p>
+
+  <h3>Module scores</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Module</th><th class="num">Score</th><th class="num">Effective weight</th></tr></thead>
+      <tbody><tr><th scope="row">Forum</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Momentum</th><td class="num">+0.694</td><td class="num">15.8%</td></tr><tr><th scope="row">Options</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Relative Strength</th><td class="num">+0.637</td><td class="num">21.1%</td></tr><tr><th scope="row">Structure</th><td class="num">+0.031</td><td class="num">10.5%</td></tr><tr><th scope="row">Trend</th><td class="num">+0.029</td><td class="num">26.3%</td></tr><tr><th scope="row">Volatility</th><td class="num">-0.644</td><td class="num">10.5%</td></tr><tr><th scope="row">Volume</th><td class="num">+0.078</td><td class="num">15.8%</td></tr></tbody>
+    </table>
+  </div>
+
+  <h3>Wenxuecity attention</h3>
+  <dl class="definition-grid">
+    <div><dt>Mentions, 24h</dt><dd>0</dd></div>
+    <div><dt>Unique posts</dt><dd>0</dd></div>
+    <div><dt>Unique authors</dt><dd>0</dd></div>
+    <div><dt>Unique threads</dt><dd>0</dd></div>
+    <div><dt>Attention Z, 30d</dt><dd>Unavailable</dd></div>
+    <div><dt>Forum direction</dt><dd>Unavailable</dd></div>
+    <div><dt>Source status</dt><dd>disabled</dd></div>
+  </dl>
+  <p class="note">Attention is not treated as bullish direction when historical baseline or validated sentiment is unavailable.</p>
+
+  <h3>Levels and Risk</h3>
+  <dl class="definition-grid">
+    <div><dt>Support</dt><dd>129.94, 119.94, 112.05, 106.02</dd></div>
+    <div><dt>Resistance</dt><dd>139.71, 148.20, 156.01, 162.60</dd></div>
+    <div><dt>Invalidation</dt><dd>99.67</dd></div>
+    <div><dt>Upside targets</dt><dd>157.67, 182.53</dd></div>
+    <div><dt>ATR 14</dt><dd>16.57</dd></div>
+    <div><dt>Risk class</dt><dd>high</dd></div>
+    <div><dt>Risk purpose</dt><dd>analytical_research_context_only</dd></div>
+    <div><dt>Multipliers</dt><dd>confidence=1.0, data_quality=0.6, event=1.0, liquidity=1.0</dd></div>
+    <div><dt>Order instruction</dt><dd>None</dd></div>
+  </dl>
+  <h3>Data-quality warnings</h3>
+  <ul><li>Provider-adjusted, raw/adjusted-aligned large moves; corporate-action reconciliation unavailable: [&#x27;AAOI@2023-08-04&#x27;, &#x27;AAOI@2024-11-08&#x27;, &#x27;AAOI@2026-02-27&#x27;, &#x27;CRDO@2023-02-15&#x27;, &#x27;CRDO@2024-12-03&#x27;]</li></ul>
+</section>
+
+<section class="stock" id="lite">
+  <h2>LITE</h2>
+  <div class="kpi-grid">
+    <article class="kpi"><span>Technical score</span><strong>21.7</strong></article>
+    <article class="kpi"><span>Confidence</span><strong>79.8%</strong></article>
+    <article class="kpi"><span>Direction</span><strong>mild bullish</strong></article>
+    <article class="kpi"><span>Stock regime</span><strong>range</strong></article>
+  </div>
+
+  <h3>Confidence diagnostics</h3>
+  <p class="note">Method: deterministic_component_reliability_v1. Confidence is not a return probability.</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Component</th><th class="num">Value</th><th>Status</th></tr></thead>
+      <tbody><tr><th scope="row">Agreement</th><td class="num">0.750</td><td>available</td></tr><tr><th scope="row">Calibration Quality</th><td class="num">Unavailable</td><td>not_applicable_ai_disabled</td></tr><tr><th scope="row">Data Quality</th><td class="num">0.600</td><td>available</td></tr><tr><th scope="row">Deterministic Reliability</th><td class="num">0.500</td><td>unavailable_neutral_policy</td></tr><tr><th scope="row">Event Risk Quality</th><td class="num">1.000</td><td>available</td></tr><tr><th scope="row">Liquidity Quality</th><td class="num">1.000</td><td>available</td></tr><tr><th scope="row">Regime Stability</th><td class="num">0.700</td><td>available</td></tr><tr><th scope="row">Sample Support</th><td class="num">1.000</td><td>available</td></tr></tbody>
+    </table>
+  </div>
+  <p><strong>Preferred setup:</strong> No approved setup</p>
+
+  <h3>Module scores</h3>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Module</th><th class="num">Score</th><th class="num">Effective weight</th></tr></thead>
+      <tbody><tr><th scope="row">Forum</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Momentum</th><td class="num">+0.472</td><td class="num">21.1%</td></tr><tr><th scope="row">Options</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Relative Strength</th><td class="num">+0.458</td><td class="num">10.5%</td></tr><tr><th scope="row">Structure</th><td class="num">+0.707</td><td class="num">21.1%</td></tr><tr><th scope="row">Trend</th><td class="num">-0.037</td><td class="num">10.5%</td></tr><tr><th scope="row">Volatility</th><td class="num">-0.384</td><td class="num">21.1%</td></tr><tr><th scope="row">Volume</th><td class="num">+0.037</td><td class="num">15.8%</td></tr></tbody>
+    </table>
+  </div>
+
+  <h3>Wenxuecity attention</h3>
+  <dl class="definition-grid">
+    <div><dt>Mentions, 24h</dt><dd>0</dd></div>
+    <div><dt>Unique posts</dt><dd>0</dd></div>
+    <div><dt>Unique authors</dt><dd>0</dd></div>
+    <div><dt>Unique threads</dt><dd>0</dd></div>
+    <div><dt>Attention Z, 30d</dt><dd>Unavailable</dd></div>
+    <div><dt>Forum direction</dt><dd>Unavailable</dd></div>
+    <div><dt>Source status</dt><dd>disabled</dd></div>
+  </dl>
+  <p class="note">Attention is not treated as bullish direction when historical baseline or validated sentiment is unavailable.</p>
+
+  <h3>Levels and Risk</h3>
+  <dl class="definition-grid">
+    <div><dt>Support</dt><dd>782.40, 740.15, 699.53, 656.87</dd></div>
+    <div><dt>Resistance</dt><dd>822.78, 870.47, 914.00, 955.73</dd></div>
+    <div><dt>Invalidation</dt><dd>647.87</dd></div>
+    <div><dt>Upside targets</dt><dd>937.74, 1061.97</dd></div>
+    <div><dt>ATR 14</dt><dd>82.82</dd></div>
+    <div><dt>Risk class</dt><dd>high</dd></div>
+    <div><dt>Risk purpose</dt><dd>analytical_research_context_only</dd></div>
+    <div><dt>Multipliers</dt><dd>confidence=1.0, data_quality=0.6, event=1.0, liquidity=1.0</dd></div>
+    <div><dt>Order instruction</dt><dd>None</dd></div>
+  </dl>
+  <h3>Data-quality warnings</h3>
+  <ul><li>Provider-adjusted, raw/adjusted-aligned large moves; corporate-action reconciliation unavailable: [&#x27;AAOI@2023-08-04&#x27;, &#x27;AAOI@2024-11-08&#x27;, &#x27;AAOI@2026-02-27&#x27;, &#x27;CRDO@2023-02-15&#x27;, &#x27;CRDO@2024-12-03&#x27;]</li></ul>
+</section>
+
+<section class="stock" id="mrvl">
+  <h2>MRVL</h2>
+  <div class="kpi-grid">
+    <article class="kpi"><span>Technical score</span><strong>11.7</strong></article>
+    <article class="kpi"><span>Confidence</span><strong>76.0%</strong></article>
+    <article class="kpi"><span>Direction</span><strong>neutral</strong></article>
+    <article class="kpi"><span>Stock regime</span><strong>range</strong></article>
   </div>
 
   <h3>Confidence diagnostics</h3>
@@ -95,7 +221,7 @@ footer { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line);
   <div class="table-wrap">
     <table>
       <thead><tr><th>Module</th><th class="num">Score</th><th class="num">Effective weight</th></tr></thead>
-      <tbody><tr><th scope="row">Forum</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Momentum</th><td class="num">+0.663</td><td class="num">15.8%</td></tr><tr><th scope="row">Options</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Relative Strength</th><td class="num">+0.617</td><td class="num">21.1%</td></tr><tr><th scope="row">Structure</th><td class="num">-0.456</td><td class="num">10.5%</td></tr><tr><th scope="row">Trend</th><td class="num">+0.032</td><td class="num">26.3%</td></tr><tr><th scope="row">Volatility</th><td class="num">-0.626</td><td class="num">10.5%</td></tr><tr><th scope="row">Volume</th><td class="num">+0.316</td><td class="num">15.8%</td></tr></tbody>
+      <tbody><tr><th scope="row">Forum</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Momentum</th><td class="num">+0.224</td><td class="num">21.1%</td></tr><tr><th scope="row">Options</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Relative Strength</th><td class="num">+0.014</td><td class="num">10.5%</td></tr><tr><th scope="row">Structure</th><td class="num">+0.548</td><td class="num">21.1%</td></tr><tr><th scope="row">Trend</th><td class="num">+0.235</td><td class="num">10.5%</td></tr><tr><th scope="row">Volatility</th><td class="num">-0.256</td><td class="num">21.1%</td></tr><tr><th scope="row">Volume</th><td class="num">-0.113</td><td class="num">15.8%</td></tr></tbody>
     </table>
   </div>
 
@@ -113,121 +239,11 @@ footer { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line);
 
   <h3>Levels and Risk</h3>
   <dl class="definition-grid">
-    <div><dt>Support</dt><dd>130.61, 120.72, 113.17, 106.10</dd></div>
-    <div><dt>Resistance</dt><dd>139.20, 147.51, 155.79, 162.60</dd></div>
-    <div><dt>Invalidation</dt><dd>103.03</dd></div>
-    <div><dt>Upside targets</dt><dd>160.08, 184.53</dd></div>
-    <div><dt>ATR 14</dt><dd>16.30</dd></div>
-    <div><dt>Risk class</dt><dd>high</dd></div>
-    <div><dt>Risk purpose</dt><dd>analytical_research_context_only</dd></div>
-    <div><dt>Multipliers</dt><dd>confidence=1.0, data_quality=0.6, event=1.0, liquidity=1.0</dd></div>
-    <div><dt>Order instruction</dt><dd>None</dd></div>
-  </dl>
-  <h3>Data-quality warnings</h3>
-  <ul><li>Provider-adjusted, raw/adjusted-aligned large moves; corporate-action reconciliation unavailable: [&#x27;AAOI@2023-08-04&#x27;, &#x27;AAOI@2024-11-08&#x27;, &#x27;AAOI@2026-02-27&#x27;, &#x27;CRDO@2023-02-15&#x27;, &#x27;CRDO@2024-12-03&#x27;]</li></ul>
-</section>
-
-<section class="stock" id="lite">
-  <h2>LITE</h2>
-  <div class="kpi-grid">
-    <article class="kpi"><span>Technical score</span><strong>23.9</strong></article>
-    <article class="kpi"><span>Confidence</span><strong>81.0%</strong></article>
-    <article class="kpi"><span>Direction</span><strong>mild bullish</strong></article>
-    <article class="kpi"><span>Stock regime</span><strong>weak trend</strong></article>
-  </div>
-
-  <h3>Confidence diagnostics</h3>
-  <p class="note">Method: deterministic_component_reliability_v1. Confidence is not a return probability.</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Component</th><th class="num">Value</th><th>Status</th></tr></thead>
-      <tbody><tr><th scope="row">Agreement</th><td class="num">0.800</td><td>available</td></tr><tr><th scope="row">Calibration Quality</th><td class="num">Unavailable</td><td>not_applicable_ai_disabled</td></tr><tr><th scope="row">Data Quality</th><td class="num">0.600</td><td>available</td></tr><tr><th scope="row">Deterministic Reliability</th><td class="num">0.500</td><td>unavailable_neutral_policy</td></tr><tr><th scope="row">Event Risk Quality</th><td class="num">1.000</td><td>available</td></tr><tr><th scope="row">Liquidity Quality</th><td class="num">1.000</td><td>available</td></tr><tr><th scope="row">Regime Stability</th><td class="num">0.700</td><td>available</td></tr><tr><th scope="row">Sample Support</th><td class="num">1.000</td><td>available</td></tr></tbody>
-    </table>
-  </div>
-  <p><strong>Preferred setup:</strong> No approved setup</p>
-
-  <h3>Module scores</h3>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Module</th><th class="num">Score</th><th class="num">Effective weight</th></tr></thead>
-      <tbody><tr><th scope="row">Forum</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Momentum</th><td class="num">+0.661</td><td class="num">15.8%</td></tr><tr><th scope="row">Options</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Relative Strength</th><td class="num">+0.597</td><td class="num">21.1%</td></tr><tr><th scope="row">Structure</th><td class="num">+0.268</td><td class="num">10.5%</td></tr><tr><th scope="row">Trend</th><td class="num">-0.045</td><td class="num">26.3%</td></tr><tr><th scope="row">Volatility</th><td class="num">-0.295</td><td class="num">10.5%</td></tr><tr><th scope="row">Volume</th><td class="num">+0.146</td><td class="num">15.8%</td></tr></tbody>
-    </table>
-  </div>
-
-  <h3>Wenxuecity attention</h3>
-  <dl class="definition-grid">
-    <div><dt>Mentions, 24h</dt><dd>0</dd></div>
-    <div><dt>Unique posts</dt><dd>0</dd></div>
-    <div><dt>Unique authors</dt><dd>0</dd></div>
-    <div><dt>Unique threads</dt><dd>0</dd></div>
-    <div><dt>Attention Z, 30d</dt><dd>Unavailable</dd></div>
-    <div><dt>Forum direction</dt><dd>Unavailable</dd></div>
-    <div><dt>Source status</dt><dd>disabled</dd></div>
-  </dl>
-  <p class="note">Attention is not treated as bullish direction when historical baseline or validated sentiment is unavailable.</p>
-
-  <h3>Levels and Risk</h3>
-  <dl class="definition-grid">
-    <div><dt>Support</dt><dd>868.54, 822.46, 782.82, 740.56</dd></div>
-    <div><dt>Resistance</dt><dd>905.45, 943.87, 986.20, 1040.02</dd></div>
-    <div><dt>Invalidation</dt><dd>731.17</dd></div>
-    <div><dt>Upside targets</dt><dd>1009.42, 1128.67</dd></div>
-    <div><dt>ATR 14</dt><dd>79.50</dd></div>
-    <div><dt>Risk class</dt><dd>high</dd></div>
-    <div><dt>Risk purpose</dt><dd>analytical_research_context_only</dd></div>
-    <div><dt>Multipliers</dt><dd>confidence=1.0, data_quality=0.6, event=1.0, liquidity=1.0</dd></div>
-    <div><dt>Order instruction</dt><dd>None</dd></div>
-  </dl>
-  <h3>Data-quality warnings</h3>
-  <ul><li>Provider-adjusted, raw/adjusted-aligned large moves; corporate-action reconciliation unavailable: [&#x27;AAOI@2023-08-04&#x27;, &#x27;AAOI@2024-11-08&#x27;, &#x27;AAOI@2026-02-27&#x27;, &#x27;CRDO@2023-02-15&#x27;, &#x27;CRDO@2024-12-03&#x27;]</li></ul>
-</section>
-
-<section class="stock" id="mrvl">
-  <h2>MRVL</h2>
-  <div class="kpi-grid">
-    <article class="kpi"><span>Technical score</span><strong>1.8</strong></article>
-    <article class="kpi"><span>Confidence</span><strong>73.5%</strong></article>
-    <article class="kpi"><span>Direction</span><strong>neutral</strong></article>
-    <article class="kpi"><span>Stock regime</span><strong>range</strong></article>
-  </div>
-
-  <h3>Confidence diagnostics</h3>
-  <p class="note">Method: deterministic_component_reliability_v1. Confidence is not a return probability.</p>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Component</th><th class="num">Value</th><th>Status</th></tr></thead>
-      <tbody><tr><th scope="row">Agreement</th><td class="num">0.500</td><td>available</td></tr><tr><th scope="row">Calibration Quality</th><td class="num">Unavailable</td><td>not_applicable_ai_disabled</td></tr><tr><th scope="row">Data Quality</th><td class="num">0.600</td><td>available</td></tr><tr><th scope="row">Deterministic Reliability</th><td class="num">0.500</td><td>unavailable_neutral_policy</td></tr><tr><th scope="row">Event Risk Quality</th><td class="num">1.000</td><td>available</td></tr><tr><th scope="row">Liquidity Quality</th><td class="num">1.000</td><td>available</td></tr><tr><th scope="row">Regime Stability</th><td class="num">0.700</td><td>available</td></tr><tr><th scope="row">Sample Support</th><td class="num">1.000</td><td>available</td></tr></tbody>
-    </table>
-  </div>
-  <p><strong>Preferred setup:</strong> No approved setup</p>
-
-  <h3>Module scores</h3>
-  <div class="table-wrap">
-    <table>
-      <thead><tr><th>Module</th><th class="num">Score</th><th class="num">Effective weight</th></tr></thead>
-      <tbody><tr><th scope="row">Forum</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Momentum</th><td class="num">+0.228</td><td class="num">21.1%</td></tr><tr><th scope="row">Options</th><td class="num">Unavailable</td><td class="num">—</td></tr><tr><th scope="row">Relative Strength</th><td class="num">-0.039</td><td class="num">10.5%</td></tr><tr><th scope="row">Structure</th><td class="num">+0.085</td><td class="num">21.1%</td></tr><tr><th scope="row">Trend</th><td class="num">+0.223</td><td class="num">10.5%</td></tr><tr><th scope="row">Volatility</th><td class="num">-0.236</td><td class="num">21.1%</td></tr><tr><th scope="row">Volume</th><td class="num">-0.110</td><td class="num">15.8%</td></tr></tbody>
-    </table>
-  </div>
-
-  <h3>Wenxuecity attention</h3>
-  <dl class="definition-grid">
-    <div><dt>Mentions, 24h</dt><dd>0</dd></div>
-    <div><dt>Unique posts</dt><dd>0</dd></div>
-    <div><dt>Unique authors</dt><dd>0</dd></div>
-    <div><dt>Unique threads</dt><dd>0</dd></div>
-    <div><dt>Attention Z, 30d</dt><dd>Unavailable</dd></div>
-    <div><dt>Forum direction</dt><dd>Unavailable</dd></div>
-    <div><dt>Source status</dt><dd>disabled</dd></div>
-  </dl>
-  <p class="note">Attention is not treated as bullish direction when historical baseline or validated sentiment is unavailable.</p>
-
-  <h3>Levels and Risk</h3>
-  <dl class="definition-grid">
-    <div><dt>Support</dt><dd>212.05, 202.00, 192.04, 180.16</dd></div>
-    <div><dt>Resistance</dt><dd>220.82, 233.06, 241.60, 251.18</dd></div>
-    <div><dt>Invalidation</dt><dd>180.49</dd></div>
-    <div><dt>Upside targets</dt><dd>247.40, 276.07</dd></div>
-    <div><dt>ATR 14</dt><dd>19.12</dd></div>
+    <div><dt>Support</dt><dd>201.71, 192.50, 180.50, 171.12</dd></div>
+    <div><dt>Resistance</dt><dd>212.08, 222.23, 232.00, 241.58</dd></div>
+    <div><dt>Invalidation</dt><dd>169.98</dd></div>
+    <div><dt>Upside targets</dt><dd>237.50, 266.44</dd></div>
+    <div><dt>ATR 14</dt><dd>19.29</dd></div>
     <div><dt>Risk class</dt><dd>high</dd></div>
     <div><dt>Risk purpose</dt><dd>analytical_research_context_only</dd></div>
     <div><dt>Multipliers</dt><dd>confidence=1.0, data_quality=0.6, event=1.0, liquidity=1.0</dd></div>
@@ -243,7 +259,7 @@ footer { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line);
 <div class="table-wrap">
 <table>
 <thead><tr><th>Source</th><th>Status</th><th class="num">Rows</th><th>Latest timestamp</th><th>Warnings</th></tr></thead>
-<tbody><tr><th scope="row">yahoo_finance_chart_snapshot</th><td>warning</td><td class="num">12324</td><td>2026-08-07T00:00:00Z</td><td>Yahoo Finance one-shot snapshot retrieved at 2026-08-09T21:35:00.678773+00:00; adjusted history reflects values available at retrieval, not a historical point-in-time vintage</td></tr><tr><th scope="row">market_csv_corporate_actions</th><td>warning</td><td class="num">0</td><td>—</td><td>No fixture corporate-action file is configured; action reconciliation is unavailable</td></tr><tr><th scope="row">wenxuecity_cfzh</th><td>disabled</td><td class="num">0</td><td>—</td><td>None</td></tr></tbody>
+<tbody><tr><th scope="row">yahoo_finance_chart_snapshot</th><td>warning</td><td class="num">12338</td><td>2026-08-10T00:00:00Z</td><td>Yahoo Finance one-shot snapshot retrieved at 2026-08-10T23:18:19.776610+00:00; adjusted history reflects values available at retrieval, not a historical point-in-time vintage</td></tr><tr><th scope="row">market_csv_corporate_actions</th><td>warning</td><td class="num">0</td><td>—</td><td>No fixture corporate-action file is configured; action reconciliation is unavailable</td></tr><tr><th scope="row">wenxuecity_cfzh</th><td>disabled</td><td class="num">0</td><td>—</td><td>None</td></tr><tr><th scope="row">score_history</th><td>passed</td><td class="num">1</td><td>—</td><td>None</td></tr></tbody>
 </table>
 </div>
 
