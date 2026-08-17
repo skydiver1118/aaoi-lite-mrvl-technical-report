@@ -167,6 +167,34 @@
       ],
       "retrieval_id": "20260814T202100948128Z",
       "run_id": "20260814T202100Z-40b3cbc6"
+    },
+    {
+      "analysis_cutoff": "2026-08-17T20:20:13.281435Z",
+      "config_hash": "567891fe70227221752cf00c88d46a1ce0d91c678a5f1d240a760bde4f21d757",
+      "entry_hash": "fa0c858ac5f1aba33ca223faf1d62721770c18d659100e482bb4d309ac337567",
+      "market_session": "2026-08-17",
+      "observations": [
+        {
+          "confidence": 81.0,
+          "direction": "mild_bullish",
+          "symbol": "AAOI",
+          "technical_score": 32.0099
+        },
+        {
+          "confidence": 81.0,
+          "direction": "mild_bullish",
+          "symbol": "LITE",
+          "technical_score": 30.374087
+        },
+        {
+          "confidence": 81.833333,
+          "direction": "mild_bullish",
+          "symbol": "MRVL",
+          "technical_score": 34.526321
+        }
+      ],
+      "retrieval_id": "20260817T202013281434Z",
+      "run_id": "20260817T202013Z-ba446a9a"
     }
   ],
   "focus_symbols": [
