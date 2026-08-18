@@ -2,12 +2,12 @@
 
 Permanent report: https://skydiver1118.github.io/aaoi-lite-mrvl-technical-report/
 
-Market session: 2026-08-17
+Market session: 2026-08-18
 
-Run ID: `20260817T202013Z-ba446a9a`
+Run ID: `20260818T202223Z-b741fac9`
 
-Report SHA-256: `002fd28c9c5c1b9b25f9fca8fc6ab9448c30911852e803bc573200b0c820357c`
+Report SHA-256: `22175eaadbd2dc00f64c968395e905bcdfc9c6cbbeace5c3e4315ca46b0539b4`
 
-Score-history SHA-256: `8d3f0e7a0a934fc6c0e6911181de861a43c2249b86eec300c3e6830b168e0e2a`
+Score-history SHA-256: `9bbfa9c5cbd2ef01517c42c3426f51fb93c9fb169f498e39502798a7e7c58d7c`
 
 Source: deterministic Yahoo one-shot snapshot with authenticated local provenance.
